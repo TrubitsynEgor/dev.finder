@@ -1,6 +1,6 @@
 import styles from './InfoItem.module.scss';
 
-interface InfoItemProps {
+export interface InfoItemProps {
   icon: React.ReactNode
   text?: string | null
   isLink?: boolean
@@ -20,7 +20,7 @@ export const InfoItem = ({ icon, text, isLink }: InfoItemProps) => {
       {icon}
       <div>
         {isLink && text
-          ? (<a href={currentHref} className={styles.link} target='_blank' rel='noreferrer'>currentText</a>)
+          ? (<a href={currentHref} className={styles.link} target='_blank' rel='noreferrer'>{currentText}</a>)
           : currentText}
       </div>
     </div>
